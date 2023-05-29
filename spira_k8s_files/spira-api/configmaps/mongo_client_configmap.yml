@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: mongo-client-env
 data:
-  DATABASE_NAME: test_db
+  DATABASE_NAME: test_database
   user_collection_name: users
   model_collection_name: models
   inference_collection_name: inferences

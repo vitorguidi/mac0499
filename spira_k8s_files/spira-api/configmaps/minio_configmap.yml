@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: minio-configmap
 data:
-  minio_conn_url: minio:9000
+  minio_conn_url: minio:80
   bucket_name: audio-files
   file_extension: .wav

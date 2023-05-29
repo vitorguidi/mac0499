@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: model-register-configmap  
+data:
+  mlflow_conn_url: http://localhost:5000
+  model_path: models:/pyfunc-test-model/1

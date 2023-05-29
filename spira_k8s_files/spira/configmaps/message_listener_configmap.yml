@@ -5,3 +5,5 @@ metadata:
 data:
   loop_interval: "0.01"
   central_channel: result_updates
+  nats_conn_url: nats://my-nats:4222
+  receiving_channel: model_channel

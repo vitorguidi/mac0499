@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-client-env
+data:
+  DATABASE_NAME: test_db
+  user_collection_name: users
+  model_collection_name: models
+  inference_collection_name: inferences
+  result_collection_name: results

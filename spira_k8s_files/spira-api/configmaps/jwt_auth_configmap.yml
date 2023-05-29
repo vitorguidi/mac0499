@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: jwt-auth-configmap
+data:
+  key: a_secret_key
+  algorithm: HS256
+  expire_time: "30"
+  context_scheme: bcrypt
+  deprecated: auto
+  CLIENT_URL: "*"

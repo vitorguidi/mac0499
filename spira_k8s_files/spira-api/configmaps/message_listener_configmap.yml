@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: message-listener-configmap
+data:
+  loop_interval: "0.01"
+  central_channel: result_updates

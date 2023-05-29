@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: spira-api-test
-      image: uspcodelab/spira-api-test:v0.1.8
+      image: uspcodelab/spira-api-test:v0.1.9
       env:
         - name: M_CONN_URL
           valueFrom:

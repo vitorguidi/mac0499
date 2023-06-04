@@ -7,5 +7,6 @@ data:
   model_path: models:/pyfunc-test-model/1
   BOOTSTRAP_MODEL_NAME: pyfunc-test-model
   MLFLOW_BUCKET_NAME: mlflow
-  AUTH_ENDPOINT: spira-api-server:80/v1/users/auth
-  MODEL_CREATION_ENDPOINT: spira-api-server:80/v1/models
+  AUTH_ENDPOINT: http://spira-api-server:80/v1/users/auth
+  MODEL_CREATION_ENDPOINT: http://spira-api-server:80/v1/models
+  MLFLOW_S3_ENDPOINT_URL: http://minio:80

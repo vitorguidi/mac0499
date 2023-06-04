@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: spira-inf-test
-        image: uspcodelab/spira-model-server:v0.1.5
+        image: uspcodelab/spira-model-server:v0.1.6-beta5
         env:
           - name: M_CONN_URL
             valueFrom:
@@ -51,7 +51,7 @@ spec:
               name: spira-minio-tenant-secret
       initContainers:
       - name: spira-mlflow-bootstrap
-        image: uspcodelab/spira-model-server:v0.1.5
+        image: uspcodelab/spira-model-server:v0.1.6-beta5
         env:
           - name: M_CONN_URL
             valueFrom:
@@ -62,5 +62,9 @@ spec:
         envFrom:
           - configMapRef:
               name: model-register-configmap
+          - configMapRef:
+              name: minio-configmap
           - secretRef:
               name: spira-api-creds
+          - secretRef:
+              name: spira-minio-tenant-secret

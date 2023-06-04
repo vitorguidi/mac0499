@@ -49,3 +49,18 @@ spec:
               name: jwt-auth-configmap
           - secretRef:
               name: spira-minio-tenant-secret
+      initContainers:
+      - name: spira-user-bootstrap
+        image: uspcodelab/spira-api:latest
+        env:
+          - name: M_CONN_URL
+            valueFrom:
+              secretKeyRef:
+                name: example-mongodb-admin-my-user
+                key: connectionString.standard
+        command: ["python3", "init.py"]
+        envFrom:
+          - configMapRef:
+              name: mongo-client-env
+          - configMapRef:
+              name: jwt-auth-configmap

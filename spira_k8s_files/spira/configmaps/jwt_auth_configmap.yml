@@ -8,4 +8,4 @@ data:
   expire_time: "30"
   context_scheme: bcrypt
   deprecated: auto
-  CLIENT_URL: "*"
+  CLIENT_URL: "localhost:8000"

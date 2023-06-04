@@ -4,6 +4,8 @@ metadata:
   name: mongo-client-env
 data:
   DATABASE_NAME: test_database
+  BOOTSTRAP_MONGO_USER: username
+  BOOTSTRAP_MONGO_PASSWORD: password
   user_collection_name: users
   model_collection_name: models
   inference_collection_name: inferences

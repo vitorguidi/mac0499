@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-shell-debug
+  labels:
+    app: mongo-shell-debug
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongo-shell-debug
+  template:
+    metadata:
+      labels:
+        app: mongo-shell-debug
+    spec:
+      containers:
+      - name: mongo-shell
+        image: mongo:latest
+        command: ["/bin/bash"]
+        args: ["-c", "mongosh $CONNECTION_URL"]
+        stdin: true
+        env:
+        - name: CONNECTION_URL
+          valueFrom:
+            secretKeyRef:
+              name: example-mongodb-admin-my-user
+              key: connectionString.standard

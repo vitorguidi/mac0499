@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spira-inference-test-pod
+spec:
+  containers:
+    - name: spira-inference-test
+      image: uspcodelab/spira-model-server-test:v0.1.4
+      env:
+        - name: M_CONN_URL
+          valueFrom:
+            secretKeyRef:
+              name: example-mongodb-admin-my-user
+              key: connectionString.standard
+      command: ["/bin/sh"]
+      args: ["-c", "while true; do echo hello; sleep 10;done"]
+      envFrom:
+        - configMapRef:
+            name: mongo-client-env
+        - configMapRef:
+            name: minio-configmap
+        - configMapRef:
+            name: message-listener-configmap
+        - configMapRef:
+            name: jwt-auth-configmap
+        - configMapRef:
+            name: model-register-configmap
+        - secretRef:
+            name: spira-minio-tenant-secret
+      # Add any additional configuration or resource limits here

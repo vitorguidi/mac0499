@@ -1,0 +1,66 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: spira-inf-server
+spec:
+  selector:
+    app: spira-inf-server
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spira-inf-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spira-inf-server
+  template:
+    metadata:
+      labels:
+        app: spira-inf-server
+    spec:
+      containers:
+      - name: spira-inf-test
+        image: uspcodelab/spira-model-server:v0.1.5
+        env:
+          - name: M_CONN_URL
+            valueFrom:
+              secretKeyRef:
+                name: example-mongodb-admin-my-user
+                key: connectionString.standard
+        command: ["python3", "main.py"]
+        ports:
+          - containerPort: 5000
+        envFrom:
+          - configMapRef:
+              name: mongo-client-env
+          - configMapRef:
+              name: minio-configmap
+          - configMapRef:
+              name: message-listener-configmap
+          - configMapRef:
+              name: jwt-auth-configmap
+          - secretRef:
+              name: spira-minio-tenant-secret
+      initContainers:
+      - name: spira-mlflow-bootstrap
+        image: uspcodelab/spira-model-server:v0.1.5
+        env:
+          - name: M_CONN_URL
+            valueFrom:
+              secretKeyRef:
+                name: example-mongodb-admin-my-user
+                key: connectionString.standard
+        command: ["python3", "init.py"]
+        envFrom:
+          - configMapRef:
+              name: model-register-configmap
+          - secretRef:
+              name: spira-api-creds

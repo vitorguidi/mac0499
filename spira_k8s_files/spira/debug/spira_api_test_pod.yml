@@ -12,8 +12,6 @@ spec:
             secretKeyRef:
               name: example-mongodb-admin-my-user
               key: connectionString.standard
-        - name: nats_conn_url
-          value: nats://my-nats:4222
       command: ["/bin/sh"]
       args: ["-c", "while true; do echo hello; sleep 10;done"]
       envFrom:

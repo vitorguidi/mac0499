@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: spira-inf-test
-        image: uspcodelab/spira-model-server:v0.1.6-beta8
+        image: uspcodelab/spira-model-server:v0.1.6-beta11
         env:
           - name: M_CONN_URL
             valueFrom:
@@ -52,7 +52,7 @@ spec:
               name: spira-minio-tenant-secret
       initContainers:
       - name: spira-mlflow-bootstrap
-        image: uspcodelab/spira-model-server:v0.1.6-beta8
+        image: uspcodelab/spira-model-server:v0.1.6-beta11
         env:
           - name: M_CONN_URL
             valueFrom:

@@ -4,7 +4,7 @@ metadata:
   name: model-register-configmap  
 data:
   mlflow_conn_url: http://mlflow:5000
-  model_path: models:/pyfunc-test-model/1
+  model_path: models:/pyfunc-test-model/Production
   BOOTSTRAP_MODEL_NAME: pyfunc-test-model
   MLFLOW_BUCKET_NAME: mlflow
   AUTH_ENDPOINT: http://spira-api-server:80/v1/users/auth

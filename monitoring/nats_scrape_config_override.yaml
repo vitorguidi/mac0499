@@ -1,0 +1,12 @@
+exporter:
+  # You have to enable exporter first
+  enabled: true
+  serviceMonitor:
+    enabled: true
+    namespace: spira
+    labels:
+      release: kube-prom
+
+cluster:
+  enabled: true
+  replicas: 3

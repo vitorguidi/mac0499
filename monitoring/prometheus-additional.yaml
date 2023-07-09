@@ -1,0 +1,6 @@
+- job_name: minio-job
+  bearer_token: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJwcm9tZXRoZXVzIiwic3ViIjoiWHgzeUtaNklvWWdRQmFyMyIsImV4cCI6NDg0MjQ1NzQ4NX0.SRsxBDS4DN27wDow9uGZtjhKc_azkbHgPf2TeBuMHriAqonLMK1jzxyvo8lPR0fyYEYntYind1-d5fdcsQcH4Q
+  metrics_path: /minio/v2/metrics/cluster
+  scheme: http
+  static_configs:
+  - targets: ['minio:80']

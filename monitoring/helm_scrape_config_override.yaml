@@ -1,0 +1,7 @@
+# helm install kube-prom prometheus-community/kube-prometheus-stack --values helm_scrape_config_override.yaml
+prometheus:
+  prometheusSpec:
+    additionalScrapeConfigsSecret:
+      enabled: true
+      name: additional-scrape-configs
+      key: prometheus-additional.yaml

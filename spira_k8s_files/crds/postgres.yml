@@ -12,7 +12,7 @@ metadata:
 spec:
   dockerImage: ghcr.io/zalando/spilo-15:3.0-p1
   teamId: "acid"
-  numberOfInstances: 4
+  numberOfInstances: 3
   users:  # Application/Robot users
     zalando:
     - superuser

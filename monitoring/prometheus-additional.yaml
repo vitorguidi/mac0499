@@ -1,4 +1,3 @@
-scrape_configs:
 - job_name: minio-job
   bearer_token: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJwcm9tZXRoZXVzIiwic3ViIjoiVnZGd3hFRlJWeGRxVzBhVSIsImV4cCI6NDg0NTk5MTM2Nn0.xF8GCwR3qtSWLqLw7mpx3UTJVKkGizeeB6rb-V5PEGAFI9yoIJuOqX5RgNBDukf1-vclaAWh_EgAz8eFS5tayA
   metrics_path: /minio/v2/metrics/cluster

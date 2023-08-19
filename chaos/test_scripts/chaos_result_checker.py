@@ -17,7 +17,7 @@ def main():
     ack_and_not_completed_inferences = 0
     for inference_id in f.readlines():
         inference_id = inference_id.strip('\n') #reading from file gives us string with \n, will not hash properly on dict
-        if not is_valid_uuid(inference_id):
+        if inference_id == "connection failed" or inference_id == "internal error":
             failed_inference_acks += 1
         else:
             if inference_id not in inference_status:

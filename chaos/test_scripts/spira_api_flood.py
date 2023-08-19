@@ -31,7 +31,7 @@ def flood_and_log():
         except(requests.ConnectionError):
             f.write("connection failed\n")
         except(requests.HTTPError) as e:
-            f.write(e.errno)
+            f.write(e)
 
 def get_token():
     

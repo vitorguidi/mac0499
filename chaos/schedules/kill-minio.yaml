@@ -15,5 +15,5 @@ spec:
         - spira
       labelSelectors:
         v1.min.io/console: spira-console
-    mode: all
+    mode: one
     action: pod-kill

@@ -14,6 +14,6 @@ spec:
       namespaces:
         - spira
       labelSelectors:
-        app: spira-inf-server
+        app: spira-api-server
     mode: one
     action: pod-kill

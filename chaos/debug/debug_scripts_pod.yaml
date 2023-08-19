@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: python3-dbg-pod
+spec:
+  containers:
+  - name: debug-container
+    image: python:latest
+    command: ["tail", "-f", "/dev/null"]

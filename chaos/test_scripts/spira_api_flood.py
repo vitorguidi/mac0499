@@ -28,8 +28,10 @@ def flood_and_log(id, token):
         try:
             inf_id = register_inference(id, token)
             f.write(inf_id + "\n")
-        except(requests.HTTPError, requests.ConnectionError):
-            f.write("fail\n")
+        except(requests.ConnectionError):
+            f.write("connection failed\n")
+        except(requests.HTTPError) as e:
+            f.write(e.response)
 
 def get_token():
     

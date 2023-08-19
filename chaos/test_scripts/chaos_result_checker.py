@@ -1,5 +1,5 @@
 import os
-import requests, json
+import requests, json, uuid
 
 spira_api_base_url = os.environ["SPIRA_API_BASE_URL"]
 user = os.environ["SPIRA_USER"]
@@ -17,7 +17,7 @@ def main():
     ack_and_not_completed_inferences = 0
     for inference_id in f.readlines():
         inference_id = inference_id.strip('\n') #reading from file gives us string with \n, will not hash properly on dict
-        if inference_id == "fail":
+        if not is_valid_uuid(inference_id):
             failed_inference_acks += 1
         else:
             if inference_id not in inference_status:
@@ -86,5 +86,13 @@ def build_inference_map(inferences):
     for inference in inferences:
         result[inference["id"]] = inference["status"]
     return result
+
+def is_valid_uuid(value):
+    try:
+        uuid.UUID(str(value))
+
+        return True
+    except ValueError:
+        return False
     
 main()

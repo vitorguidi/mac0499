@@ -20,18 +20,18 @@ def signal_handler(sig, frame):
 signal.signal(signal.SIGINT, signal_handler)
 
 def main():
-    (user_id, token, token_type) = get_token()
-    flood_and_log(user_id, token)
+    flood_and_log()
 
-def flood_and_log(id, token):
+def flood_and_log():
     while True:
         try:
-            inf_id = register_inference(id, token)
+            (user_id, token, token_type) = get_token()
+            inf_id = register_inference(user_id, token)
             f.write(inf_id + "\n")
         except(requests.ConnectionError):
             f.write("connection failed\n")
         except(requests.HTTPError) as e:
-            f.write(e.response)
+            f.write(e)
 
 def get_token():
     

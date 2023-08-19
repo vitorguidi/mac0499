@@ -1,0 +1,19 @@
+kind: Schedule
+apiVersion: chaos-mesh.org/v1alpha1
+metadata:
+  namespace: spira
+  name: kill-minio
+spec:
+  schedule: '*/1 * * * *'
+  startingDeadlineSeconds: null
+  concurrencyPolicy: Forbid
+  historyLimit: 1000
+  type: PodChaos
+  podChaos:
+    selector:
+      namespaces:
+        - spira
+      labelSelectors:
+        v1.min.io/console: spira-console
+    mode: all
+    action: pod-kill

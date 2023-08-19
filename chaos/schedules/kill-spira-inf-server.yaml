@@ -1,0 +1,19 @@
+kind: Schedule
+apiVersion: chaos-mesh.org/v1alpha1
+metadata:
+  namespace: spira
+  name: kill-spira-inf-server
+spec:
+  schedule: '*/1 * * * *'
+  startingDeadlineSeconds: null
+  concurrencyPolicy: Forbid
+  historyLimit: 1000
+  type: PodChaos
+  podChaos:
+    selector:
+      namespaces:
+        - spira
+      labelSelectors:
+        app: spira-inf-server
+    mode: one
+    action: pod-kill

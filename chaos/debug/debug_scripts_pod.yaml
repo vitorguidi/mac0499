@@ -7,3 +7,10 @@ spec:
   - name: debug-container
     image: python:latest
     command: ["tail", "-f", "/dev/null"]
+    env:
+      - name: SPIRA_API_BASE_URL
+        value: "http://spira-api-server:80"
+      - name: SPIRA_USER
+        value: "username"
+      - name: SPIRA_PASSWORD
+        value: "password"

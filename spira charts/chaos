@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" modified="2023-09-11T04:25:19.642Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="-3r61j1xQ17VPGMyFOcr" version="21.7.4" type="device">
+  <diagram name="Page-1" id="t234XRpGVG1-REDYAXBP">
+    <mxGraphModel dx="1360" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-2" value="spira namespace" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=ns" vertex="1" parent="1">
+          <mxGeometry x="45" y="40" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-3" value="chaos daemon pod" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-4" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry y="360" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-5" value="daemonset" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="cyUbGgIm_gh33GEGG-wk-4">
+          <mxGeometry x="10" y="10" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-7" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="360" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-8" value="deployment" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="cyUbGgIm_gh33GEGG-wk-7">
+          <mxGeometry x="10" y="6" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-6" value="chaos controller manager pod" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=pod" vertex="1" parent="cyUbGgIm_gh33GEGG-wk-7">
+          <mxGeometry x="55" y="40" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-10" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry y="520" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-11" value="deployment" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="cyUbGgIm_gh33GEGG-wk-10">
+          <mxGeometry x="10" y="6" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-12" value="chaos controller manager pod" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=pod" vertex="1" parent="cyUbGgIm_gh33GEGG-wk-10">
+          <mxGeometry x="55" y="40" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-13" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="520" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-14" value="deployment" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="cyUbGgIm_gh33GEGG-wk-13">
+          <mxGeometry x="10" y="6" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-15" value="chaos dashboard pod" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=pod" vertex="1" parent="cyUbGgIm_gh33GEGG-wk-13">
+          <mxGeometry x="55" y="40" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-16" value="chaos dns service" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=svc" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="60" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-17" value="chaos controller manager service" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=svc" vertex="1" parent="1">
+          <mxGeometry x="250" y="140" width="60" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-18" value="chaos dashboard service" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=svc" vertex="1" parent="1">
+          <mxGeometry x="40" y="270" width="60" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="cyUbGgIm_gh33GEGG-wk-21" value="chaos daemon service" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=svc" vertex="1" parent="1">
+          <mxGeometry x="250" y="270" width="60" height="48" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

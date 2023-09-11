@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" modified="2023-09-11T04:41:21.640Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" version="21.7.4" etag="SPB74xAdzo2XaffacviY" type="device">
+  <diagram id="vgC-UflIMM022UUIXaID" name="Page-1">
+    <mxGraphModel dx="1360" dy="714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-1" value="spira namespace" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=ns" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-2" value="postgres repl service" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=svc" vertex="1" parent="1">
+          <mxGeometry x="50" y="130" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-3" value="postgres config service" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=svc" vertex="1" parent="1">
+          <mxGeometry x="180" y="130" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-4" value="postgres service" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=svc" vertex="1" parent="1">
+          <mxGeometry x="345" y="130" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-5" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="210" width="220" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-6" value="statefulset" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4EnLapwdcbU2V3-vp1gZ-5">
+          <mxGeometry width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="4EnLapwdcbU2V3-vp1gZ-5" source="4EnLapwdcbU2V3-vp1gZ-8" target="4EnLapwdcbU2V3-vp1gZ-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-8" value="postgres pod1" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=pod" vertex="1" parent="4EnLapwdcbU2V3-vp1gZ-5">
+          <mxGeometry x="20" y="46" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="4EnLapwdcbU2V3-vp1gZ-5" source="4EnLapwdcbU2V3-vp1gZ-10" target="4EnLapwdcbU2V3-vp1gZ-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-10" value="postgres pod2" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=pod" vertex="1" parent="4EnLapwdcbU2V3-vp1gZ-5">
+          <mxGeometry x="20" y="155" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="4EnLapwdcbU2V3-vp1gZ-5" source="4EnLapwdcbU2V3-vp1gZ-12" target="4EnLapwdcbU2V3-vp1gZ-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-12" value="postgres pod3" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=pod" vertex="1" parent="4EnLapwdcbU2V3-vp1gZ-5">
+          <mxGeometry x="20" y="255" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-13" value="data volume" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=pv" vertex="1" parent="4EnLapwdcbU2V3-vp1gZ-5">
+          <mxGeometry x="140" y="46" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-14" value="data volume" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=pv" vertex="1" parent="4EnLapwdcbU2V3-vp1gZ-5">
+          <mxGeometry x="140" y="155" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-15" value="data volume" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=pv" vertex="1" parent="4EnLapwdcbU2V3-vp1gZ-5">
+          <mxGeometry x="140" y="255" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-16" value="postgres operator service" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=svc" vertex="1" parent="1">
+          <mxGeometry x="180" y="20" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-17" value="postgres operator ui service" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=svc" vertex="1" parent="1">
+          <mxGeometry x="345" y="20" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-18" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="210" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-19" value="postgres operator pod" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=pod" vertex="1" parent="4EnLapwdcbU2V3-vp1gZ-18">
+          <mxGeometry x="40" y="40" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-20" value="deployment" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4EnLapwdcbU2V3-vp1gZ-18">
+          <mxGeometry x="10" y="10" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-21" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="410" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-22" value="postgres operator ui pod" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=pod" vertex="1" parent="4EnLapwdcbU2V3-vp1gZ-21">
+          <mxGeometry x="55" y="40" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4EnLapwdcbU2V3-vp1gZ-23" value="deployment" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4EnLapwdcbU2V3-vp1gZ-21">
+          <mxGeometry x="10" y="10" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

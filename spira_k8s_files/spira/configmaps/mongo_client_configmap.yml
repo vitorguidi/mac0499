@@ -10,3 +10,4 @@ data:
   model_collection_name: models
   inference_collection_name: inferences
   result_collection_name: results
+  hospital_collection_name: hospitals

@@ -26,7 +26,8 @@ def flood_and_log():
     while True:
         try:
             (user_id, token, token_type) = get_token()
-            inf_id = register_inference(user_id, token)
+            model_id = get_model(token)
+            inf_id = register_inference(user_id, model_id, token)
             f.write(inf_id + "\n")
         except(requests.ConnectionError):
             f.write("connection failed\n")
@@ -60,12 +61,25 @@ def get_token():
     except requests.exceptions.RequestException as e:
         raise(e)
 
-def register_inference(user_id, token):
+def get_model(token):
+    url = '{}/v1/models/'.format(spira_api_base_url)
+    try:
+        response = requests.get(
+            url, 
+            headers = {
+                "Authorization": "bearer {}".format(token)
+            }            
+        )
+        return json.loads(response.content)["models"][0]["id"]
+    except requests.exceptions.RequestException as e:
+        raise(e)
+
+def register_inference(user_id, model_id, token):
     url = '{}/v1/users/{}/inferences'.format(spira_api_base_url, user_id)
     try:
         response = requests.post(
             url, 
-            data = create_inference_data(user_id),
+            data = create_inference_data(user_id, model_id),
             files = create_inference_files(),
             headers = {
                 "Authorization": "bearer {}".format(token)
@@ -84,15 +98,15 @@ def register_inference(user_id, token):
 
 
 
-def create_inference_data(user_id):
+def create_inference_data(user_id, model_id):
     return {
         "gender": "M",
         "age": 23,
         "rgh": "fake_rgh",
         "covid_status": "Sim",
         "mask_type": "None",
-        "user_id": "64ded714897b146391ac40c9",
-        "model_id": "64ded756a5c219a0b2c6b660",
+        "user_id": user_id,
+        "model_id": model_id,
         "status": "processing",
         "local": "hospital_1",
         "cid": "fake_cid",

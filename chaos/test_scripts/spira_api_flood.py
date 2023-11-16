@@ -9,8 +9,9 @@ import time
 spira_api_base_url = os.environ["SPIRA_API_BASE_URL"]
 user = os.environ["SPIRA_USER"]
 password = os.environ["SPIRA_PASSWORD"]
+dump_file = os.environ["SPIRA_INFERENCE_DUMP_FILE"]
 
-f = open('test_run_{}.txt'.format(str(uuid.uuid4())), 'a')
+f = open(dump_file, 'a')
 
 def signal_handler(sig, frame):
     print('Gracefully exiting {}'.format(sig))
